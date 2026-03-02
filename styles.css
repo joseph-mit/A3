@@ -1,0 +1,177 @@
+:root {
+  --bg: #f3f4f6;
+  --page: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #d1d5db;
+  --line-dark: #9ca3af;
+  --caption-bg: #f8fafc;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --radius: 18px;
+  --content-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  width: min(var(--content-width), calc(100% - 32px));
+  margin: 40px auto 72px;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #6b7280;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.byline {
+  margin: 18px 0 0;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.separator {
+  padding: 0 8px;
+  color: var(--muted);
+}
+
+.report-section {
+  background: var(--page);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 28px 34px;
+  margin-bottom: 24px;
+}
+
+.report-section h2 {
+  margin: 0 0 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--line);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.figure-card {
+  margin: 0 0 22px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+}
+
+.figure-card img {
+  width: 100%;
+  background: #ffffff;
+}
+
+.figure-card figcaption {
+  padding: 14px 16px;
+  background: var(--caption-bg);
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+  color: #374151;
+}
+
+.final-figure img {
+  max-height: none;
+}
+
+.text-block {
+  margin-bottom: 22px;
+}
+
+.text-block:last-child {
+  margin-bottom: 0;
+}
+
+.section-label {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+}
+
+ul {
+  margin: 0 0 8px 22px;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
+  font-size: 1.02rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  color: #374151;
+}
+
+@media (max-width: 720px) {
+  .page {
+    width: min(var(--content-width), calc(100% - 18px));
+    margin: 18px auto 40px;
+  }
+
+  .report-section {
+    padding: 18px 16px 22px;
+    border-radius: 14px;
+  }
+
+  .site-header {
+    margin-bottom: 20px;
+  }
+
+  .byline {
+    font-size: 1rem;
+  }
+
+  .separator {
+    display: inline;
+    padding: 0 6px;
+  }
+}
