@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page">
+  <div class="page-shell">
     <header class="site-header">
       <p class="eyebrow">Assignment 3</p>
       <h1>Visualization Critique & Redesign</h1>
@@ -18,114 +18,139 @@
       </p>
     </header>
 
-    <main>
+    <main class="report-layout">
       <section class="report-section">
-        <h2>Reading & Critique</h2>
+        <div class="section-heading">
+          <h2>Reading & Critique</h2>
+        </div>
 
-        <figure class="figure-card">
+        <figure class="figure-card hero-figure">
           <img
             src="images/covid-spiral.png"
             alt="Original New York Times spiral chart of COVID-19 cases in the United States"
           />
-          <figcaption>
-            <strong>Original visualization.</strong> Spiral chart of U.S. COVID-19 cases used as the basis for critique and redesign.
-          </figcaption>
         </figure>
 
         <div class="text-block">
-          <p class="section-label">Insights about the data/visualization</p>
-          <ul>
-            <li>INSIGHT 1</li>
-            <li>INSIGHT 2</li>
-            <li>INSIGHT 3</li>
+          <p class="section-label">Insights about the data/visualization:</p>
+          <ul class="insight-list">
+            <li>The chart suggests a repeating seasonal structure to Covid spread: time loops through the calendar, so winter appears more than once and lets the reader compare one cold-season surge against another.</li>
+            <li>2020 begins relatively small near the center, but the curve thickens and rises noticeably toward the end of the year, implying that the pandemic intensified sharply as it moved into late fall and winter.</li>
+            <li>The winter 2020–21 surge is much larger than the early 2020 period, so the graphic conveys escalation rather than a stable repeating cycle.</li>
+            <li>2021 appears as a long year of sustained burden rather than one isolated spike. The spiral does not collapse back toward the center; instead, it stays expanded for much of the year, which implies persistently elevated case counts.</li>
+            <li>Within 2021, there seems to be more than one hump or swell, including a broad rise in the middle to later part of the year and then another climb toward winter, suggesting multiple major waves rather than one continuous plateau.</li>
+            <li>The most obvious takeaway is that January 2022 dwarfs everything before it. The outermost part of the spiral expands dramatically, making the Omicron wave look unprecedented in scale.</li>
+            <li>The rise into early 2022 looks steeper and more abrupt than earlier increases, so the chart implies not only a higher peak but also a faster acceleration.</li>
+            <li>The repeated winter expansions make it seem that the pandemic is cyclical, but not evenly cyclical: each return is different in size, with the latest one far more extreme than the previous ones.</li>
+            <li>The black line indicates a central trajectory or average, while the red band around it suggests a spread, range, or uncertainty envelope, especially near January 2022 where that band widens substantially.</li>
+            <li>Because the outermost 2022 band widens so much, the chart also implies that there is more uncertainty or variability around the Omicron-period estimate than around the earlier historical portions.</li>
+            <li>Even without precise numbers, the viewer can infer a broad temporal story: small first year, heavier second year, explosive start to the third.</li>
+            <li>Overall, the clearest data insight is that Omicron was not presented as just another wave, but as a rupture in scale, large enough to visually overpower the previous two years of pandemic history.</li>
           </ul>
         </div>
 
         <div class="text-block">
-          <p class="section-label">Design Critique</p>
+          <p class="section-label">Design Critique:</p>
+
           <p>
-            DESCRIBE YOUR CRITIQUE IN 1–2 PARAGRAPHS.
+            I think that using a spiral as a data visualization is an ambitious attempt to turn three years of pandemic history into a single seasonal image, an eye-catching image no less! Read literally, this maps calendar time onto a looping path, beginning near the center in 2020 and winding outward through 2021 to early 2022, so that we can see recurrence and escalation all at once. From this, we can almost immediately see several data patterns come through. For instance, the 2020 coil is the smallest, yet it still steepens sharply toward the end of the year; 2021 reads as a longer period of sustained strain, with a large summer-to-fall swell followed by another winter rise; and the January 2022 Omicron surge is visually overwhelming, bursting past the earlier waves and making the article’s central claim that this month would be extraordinary in scale and disruption, immediately legible. In that sense, the graphic succeeds on its own terms. Rather than just being a mere neutral dashboard, it is in fact the opening image of a New York Times opinion essay, and as an opinion graphic, I personally consider it rhetorically shrewd. For one, the spiral form makes the pandemic feel cyclical without pretending that cycles are equal, and the restrained color palette keeps the readers’ attention on the shape and force of the surge. Moreover, I like that layout-wise, there is enough negative space for the figure to breathe. Also, the month labels are sparse and not at all cluttered, and once the reader understands that the path is a calendar unspooling through repeated seasons, the visual metaphor is memorable (which I think is likely a large part of the point!). I think this chart successfully fuses message and form. The story it tells is not merely that cases rose, but also that the country is being pulled back through another winter, only now at a far larger scale.
+          </p>
+
+          <p>
+            Where I think this data visualization falls short is analytical readability. The core quantitative task here is to compare magnitude across time, yet the chart asks the reader to judge that magnitude from the thickness of a band wrapped around a spiral, instead of from positions on a common linear scale. Personally, I feel that is a costly choice. This design choice makes the most important comparisons, e.g. January 2021 versus January 2022, summer versus winter, the speed of ascent versus descent, harder than they really need to be, because the reader now has to mentally unroll the figure before reasoning with it. The small wedge key at upper left, to me, is the weakest part of the design. I think that it takes too long to decipher whether cases are encoded by band width, distance from the center, or some combination of the two. The black line labeled “7-day average” helps, but it also creates semantic confusion, because the red band is visually louder than the very thing it is supposed to explain. The result is a chart whose message might be felt by readers, but maybe not eventually fully understood. In publication context, I think that tradeoff was probably deliberate because a plain line chart though being more readable, would ultimately be many times more forgettable than the spiral. I believe that the best redesign would be a hybrid, perhaps keep the spiral as a small contextual inset or headline motif, but move the main evidence into either three aligned Jan–Dec small multiples or a single linear time series with direct labeling and a clearly explained shaded projection band. That would preserve the seasonal idea and the opinion-page force while relocating the critical comparison to the perceptually stronger encoding of position on a shared scale.
           </p>
         </div>
       </section>
 
       <section class="report-section">
-        <h2>Visualization Sketches</h2>
-
-        <figure class="figure-card">
-          <img
-            src="images/sketch-1.jpg"
-            alt="Sketch 1 showing first redesign concept"
-          />
-          <figcaption>
-            <strong>Figure 1.</strong> BRIEF CAPTION HERE.
-          </figcaption>
-        </figure>
-
-        <div class="text-block">
-          <p class="section-label">Design Rationale for Sketch 1</p>
-          <ul>
-            <li>RATIONALE 1</li>
-            <li>RATIONALE 2</li>
-            <li>RATIONALE 3</li>
-          </ul>
+        <div class="section-heading">
+          <h2>Visualization Sketches</h2>
         </div>
 
-        <figure class="figure-card">
-          <img
-            src="images/sketch-2.jpg"
-            alt="Sketch 2 showing second redesign concept"
-          />
-          <figcaption>
-            <strong>Figure 2.</strong> BRIEF CAPTION HERE.
-          </figcaption>
-        </figure>
+        <div class="sketch-stack">
+          <article class="sketch-card">
+            <figure class="figure-card sketch-figure">
+              <img
+                src="images/sketch-1.jpg"
+                alt="Pen and paper sketch 1 for the visualization redesign"
+              />
+              <figcaption>Sketch 1</figcaption>
+            </figure>
 
-        <div class="text-block">
-          <p class="section-label">Design Rationale for Sketch 2</p>
-          <ul>
-            <li>RATIONALE 1</li>
-            <li>RATIONALE 2</li>
-            <li>RATIONALE 3</li>
-          </ul>
-        </div>
+            <div class="text-block">
+              <p class="section-label">Design Rationale for Sketch 1:</p>
+              <ul class="rationale-list">
+                <li>Motivation: The original spiral makes January-to-January comparison harder than it should be, so this sketch tests the simplest strong alternative i.e. align all three years on one shared Jan–Dec frame.</li>
+                <li>What I wanted it to communicate: Covid returned on a seasonal rhythm, but each return had a different scale and shape. Omicron should read as a January event and not merely as the outermost flare of a spiral.</li>
+                <li>What works well: I think the data visualization communicates its message clearly. It uses a perceptually strong channel i.e. position on a common scale. making direct comparison rather effortless. At the same time, it also preserves the seasonal question that motivated the original.</li>
+                <li>What does not work as well: It is analytically strong but rhetorically quieter than the original. It is really clear that it loses the memorable editorial force of the spiral and feels more like just mere evidence than like an opening image.</li>
+                <li>What I wanted to explore next: Whether the original’s seasonal motif could be preserved, but only as context rather than as the main quantitative argument.</li>
+              </ul>
+            </div>
+          </article>
 
-        <figure class="figure-card">
-          <img
-            src="images/sketch-3.jpg"
-            alt="Sketch 3 showing third redesign concept"
-          />
-          <figcaption>
-            <strong>Figure 3.</strong> BRIEF CAPTION HERE.
-          </figcaption>
-        </figure>
+          <article class="sketch-card">
+            <figure class="figure-card sketch-figure">
+              <img
+                src="images/sketch-2.jpg"
+                alt="Pen and paper sketch 2 for the visualization redesign"
+              />
+              <figcaption>Sketch 2</figcaption>
+            </figure>
 
-        <div class="text-block">
-          <p class="section-label">Design Rationale for Sketch 3</p>
-          <ul>
-            <li>RATIONALE 1</li>
-            <li>RATIONALE 2</li>
-            <li>RATIONALE 3</li>
-          </ul>
+            <div class="text-block">
+              <p class="section-label">Design Rationale for Sketch 2:</p>
+              <ul class="rationale-list">
+                <li>Motivation: Respect the New York Times Opinion context instead of treating the spiral as a mistake with no value. The spiral definitely has narrative power; the problem I feel is that in the original, it is asked to do too much analytical work.</li>
+                <li>What I wanted it to communicate: Seasonal recurrence is still the right metaphor, but the actual evidence should live on a common linear scale where peaks, slopes, and timing are easier to read for the readers.</li>
+                <li>What works well: This visualization separates motif from proof. The inset keeps the original’s rhetorical gesture, while the main chart gives us back quantitative clarity.</li>
+                <li>What does not work as well: It is compositionally more complex than sketch 1, so the annotations have to be disciplined. If the inset gets too large, it starts competing with the evidence again.</li>
+                <li>What I wanted to explore next: If the article is really about disruption as much as raw case counts, perhaps the redesign should shift from pure epidemiological comparison toward a more explicitly editorial narrative form.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sketch-card">
+            <figure class="figure-card sketch-figure">
+              <img
+                src="images/sketch-3.jpg"
+                alt="Pen and paper sketch 3 for the visualization redesign"
+              />
+              <figcaption>Sketch 3</figcaption>
+            </figure>
+
+            <div class="text-block">
+              <p class="section-label">Design Rationale for Sketch 3:</p>
+              <ul class="rationale-list">
+                <li>Motivation: Push beyond conventional chart repair and test a more interpretive representation that better matches the article’s prose about work, school, transport, and social disruption.</li>
+                <li>What I wanted it to communicate: The pandemic was not just a sequence of peaks. Rather, it was more like a moving burden. Omicron should feel like the steepest and heaviest stretch of that burden.</li>
+                <li>What works well: This is the most original of the three and the most aligned with an Opinion-page sort sensibility. The ribbon form suggests accumulation, motion, and strain rather than just isolated counts.</li>
+                <li>What does not work as well: It is the least exact. The y-axis is intentionally interpretive, so it works better as an editorial sketch than as strict quantitative evidence.</li>
+                <li>What I would explore next: If I took this forward, I would decide whether it should remain a companion concept or whether I could anchor it more tightly to a specific measurable variable without losing its narrative force.</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="report-section">
-        <h2>Final Visualization Design</h2>
+        <div class="section-heading">
+          <h2>Final Visualization Design</h2>
+        </div>
 
         <figure class="figure-card final-figure">
           <img
             src="images/final-design.png"
             alt="Final redesigned visualization of U.S. COVID-19 case trends"
           />
-          <figcaption>
-            <strong>Figure 4.</strong> BRIEF CAPTION HERE.
-          </figcaption>
+          <figcaption>Final Visualization</figcaption>
         </figure>
       </section>
 
       <section class="report-section">
-        <h2>Final Writeup</h2>
+        <div class="section-heading">
+          <h2>Final Writeup</h2>
+        </div>
 
         <div class="text-block">
           <p>
