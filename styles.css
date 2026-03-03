@@ -1,49 +1,304 @@
+:root {
+  --bg: #f4f0e8;
+  --bg-deep: #ebe3d7;
+  --paper: #fdfaf5;
+  --paper-2: #f8f3eb;
+  --text: #1f1916;
+  --muted: #6e6257;
+  --line: #d8cec0;
+  --line-strong: #c3b29b;
+  --accent: #8c5b34;
+  --accent-soft: #eadccf;
+  --shadow-1: 0 10px 30px rgba(55, 36, 20, 0.07);
+  --shadow-2: 0 18px 50px rgba(55, 36, 20, 0.10);
+  --radius-xl: 30px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --max-width: 1360px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.58), transparent 30%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page-shell {
+  width: min(var(--max-width), calc(100% - 36px));
+  margin: 22px auto 56px;
+}
+
+.site-header {
+  position: relative;
+  background: linear-gradient(180deg, rgba(253, 250, 245, 0.98), rgba(248, 243, 235, 0.96));
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-2);
+  padding: 48px 52px 40px;
+  margin-bottom: 26px;
+  overflow: hidden;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, #72492f 0%, #9a6d46 45%, #caa17a 100%);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 20px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.site-header h1 {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.byline {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.separator {
+  margin: 0 10px;
+  color: #9c8b79;
+}
+
+.report-layout {
+  display: grid;
+  gap: 26px;
+}
+
+.report-section {
+  background: rgba(253, 250, 245, 0.92);
+  border: 1px solid rgba(195, 178, 155, 0.65);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-1);
+  padding: 28px 28px 32px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2.15rem, 4vw, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+.figure-card {
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(55, 36, 20, 0.04);
+}
+
+.figure-card img {
+  display: block;
+  width: 100%;
+  background: #fff;
+}
+
+.figure-card figcaption {
+  padding: 14px 18px;
+  background: linear-gradient(180deg, #fdf9f2 0%, #f4ede2 100%);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.98rem;
+}
+
+.hero-figure {
+  margin-bottom: 26px;
+}
+
+.text-block {
+  margin-top: 22px;
+}
+
+.section-label {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 18px;
+  font-size: 1.12rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin: 0 0 12px;
+  padding-left: 0.15rem;
+  font-size: 1.08rem;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+.insight-list li + li,
+.rationale-list li + li {
+  margin-top: 12px;
+}
+
+/* SKETCH SECTION — full width images, text below */
 .sketch-stack {
   display: grid;
   gap: 34px;
 }
 
 .sketch-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-  padding: 18px;
-  background: rgba(255, 253, 249, 0.72);
-  border: 1px solid rgba(184, 171, 152, 0.4);
+  display: block;
+  padding: 0;
+  background: rgba(255, 252, 247, 0.85);
+  border: 1px solid rgba(195, 178, 155, 0.55);
   border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(55, 36, 20, 0.05);
 }
 
 .sketch-figure {
   width: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
 }
 
 .sketch-figure img {
   width: 100%;
   max-height: none;
   object-fit: contain;
+  background: #fff;
+}
+
+.sketch-figure figcaption {
+  padding: 14px 18px;
+  background: linear-gradient(180deg, #fdf9f2 0%, #f4ede2 100%);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
 .sketch-card .text-block {
   margin-top: 0;
+  padding: 22px 24px 26px;
 }
 
-/* remove the side-by-side desktop layout */
-@media (min-width: 860px) {
-  .sketch-card {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 18px;
+.final-figure img {
+  width: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .page-shell {
+    width: min(var(--max-width), calc(100% - 18px));
+    margin: 14px auto 32px;
   }
 
-  .sketch-card:nth-child(even) {
-    grid-template-columns: 1fr;
+  .site-header {
+    padding: 28px 22px 24px;
+    border-radius: 22px;
   }
 
-  .sketch-card:nth-child(even) .sketch-figure {
-    order: 0;
+  .site-header h1 {
+    font-size: clamp(2.5rem, 12vw, 4.2rem);
+    line-height: 0.94;
   }
 
-  .sketch-card:nth-child(even) .text-block {
-    order: 0;
+  .byline {
+    font-size: 1rem;
+  }
+
+  .report-section {
+    padding: 20px 18px 22px;
+    border-radius: 22px;
+  }
+
+  .section-heading {
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+  }
+
+  p,
+  li {
+    font-size: 1rem;
+  }
+
+  .sketch-card .text-block {
+    padding: 18px 18px 20px;
   }
 }
